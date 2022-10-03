@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Document
+        link(rel='stylesheet' type ="text/css" href='/css/loginStyle.css')
+        
+        
+        //- //link( href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Gloria+Hallelujah&family=Lato:wght@100&family=Patua+One&display=swap" rel="stylesheet")
+
+    body
+        include _header
+        .content1 
+            h1 Log in into your account
+            form.form--login
+                .form-group
+                    label(for="email") Email:
+                    input#email(type="email" placeholder="you@example.com" name="email" required)
+                .form-group 
+                    label(for="email") Password: 
+                    input#password(type="password" placeholder="......" name="password" required minlength=6)
+                button.form-submit Log in
+    script(src="/js/bundle.js")

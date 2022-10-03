@@ -1,0 +1,28 @@
+extends base
+
+block content
+     main
+        header.nav
+            input(type='search' ,='' placeholder='search 1000+ courses')
+            h3 freeCodeCamp (&#x1F525;)
+            .link-item 
+                nav.nav-links
+                    a.nav--items#menu(href='#')
+                        span Menu
+                    a.nav--items#sign-in(href='/signin')
+                        button Sign in
+        article.container
+            .content 
+                h1 Learn to code - for free 
+                p.p-elements Build projects.
+                p.p-elements Earn certifications.
+                p.p1-elements 
+                    | Since 2014, more than 40,000 freeCodeCamp.org graduates have gotten
+                    br
+                    |  jobs at tech companies including: 
+                .companies 
+                    p Google 
+                    p Microsoft 
+                    p Spotify 
+                    p amazon.com 
+                button.main-button Get started (it's for free)

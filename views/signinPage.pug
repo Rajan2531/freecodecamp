@@ -1,0 +1,44 @@
+
+mixin courseRow 
+    .courseDetails 
+        img(src="/img/apple logo.png" width="40px" )
+        p My name is rajan and i want to create a very good project
+
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Document
+        link(rel='stylesheet' type ="text/css" href='/css/signinPageStyle.css')
+        
+        //- //link( href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Gloria+Hallelujah&family=Lato:wght@100&family=Patua+One&display=swap" rel="stylesheet")
+
+    
+        include _header
+        .content1 
+            //- a(href="/auth/google")
+            //-     h3 Login with google 
+            //- a(href="/signup")
+            //-     h3 sign up 
+            //- a(href="/login")
+            //-     h3 Log in
+            .content2
+                a(href='/auth/google') Login with google
+                form.form--login
+                    .content3 
+                        input#email(type="email" placeholder="Email" name="email" required)
+                        input#password(type="password" placeholder="Password" name="password" required minlength=6)
+                        button.form-submit Log in
+                button.signup_button Don't have a account? Sign Up
+                    
+
+
+        include _footer
+
+
+
+   
+    
+ 

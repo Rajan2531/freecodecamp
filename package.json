@@ -1,0 +1,34 @@
+{
+  "name": "intern-assignment",
+  "version": "1.0.0",
+  "description": "freeCodeCamp website clone assignment for intern role",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+  },
+  "author": "Rajan chouhan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "db": "^3.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.2",
+    "parcel-bundler": "^1.12.5",
+    "passport": "^0.6.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "path": "^0.12.7",
+    "pug": "^3.0.2",
+    "util": "^0.12.4",
+    "utils": "^0.3.1",
+    "validator": "^13.7.0"
+  }
+}

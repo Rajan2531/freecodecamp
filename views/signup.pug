@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Document
+        link(rel='stylesheet' type ="text/css" href='/css/signinPageStyle.css')
+        
+        
+        //- //link( href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Gloria+Hallelujah&family=Lato:wght@100&family=Patua+One&display=swap" rel="stylesheet")
+
+    body
+        include _header
+        .content1 
+            //- a(href="/auth/google")
+            //-     h3 Login with google 
+            //- a(href="/signup")
+            //-     h3 sign up 
+            //- a(href="/login")
+            //-     h3 Log in
+            .content2 
+                form.form--signup
+                    .content3 
+                        input#name(type="text" placeholder="Full Name" name="name" required)
+                        input#email(type="email" placeholder="Email" name="email" required)
+                        input#password(type="password" placeholder="Password" name="password" required minlength=6)
+                        input#passwordConfirm(type="password" placeholder="Confirm Password" name="passwordConfirm" required minlength=6)
+                        button.form-submit Sign up
+               
+                    
+    script(src="/js/bundle.js")
