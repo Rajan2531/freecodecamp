@@ -7,7 +7,7 @@ const viewsController=require('./../controllers/viewsController.js');
 
 
 
-//router.use(authController.isLoggedIn)
+router.use(authController.isLoggedIn)
 router.get('/',viewsController.getHomePage);
 router.get('/login',viewsController.getLoginPage)
 router.get('/dashboard',authController.protect,viewsController.getDashboard);

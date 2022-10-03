@@ -32,7 +32,7 @@ exports.signup=catchAsync.catch(async (req,res,next)=>{
     {
         return next(new appError("could'nt create user",400));
     }
-    console.log(user.id)
+    
     const token=createJwtToken(user.id);
     res.cookie("jwt",token,{
         expires:new Date(Date.now()+10*1000*60)
@@ -71,7 +71,7 @@ exports.login=catchAsync.catch(async (req,res,next)=>{
 
 exports.protect=catchAsync.catch(async (req,res,next)=>{
      let recievedToken;
-     console.log(req.cookies.jwt);
+    
      
      if(req.headers.Authorization&&req.headers.Authorization.startsWith('Bearer'))
      {
@@ -86,7 +86,7 @@ exports.protect=catchAsync.catch(async (req,res,next)=>{
     }
     
      const tokenDecoded=await util.promisify(jwt.verify)(recievedToken,process.env.JWT_TOKEN_SECRET);
-     console.log(tokenDecoded);
+    
      const userWithInputEmail=await User.findById(tokenDecoded.id);
      if(!userWithInputEmail)
      {

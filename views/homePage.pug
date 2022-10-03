@@ -2,15 +2,23 @@ extends base
 
 block content
      main
-        header.nav
-            input(type='search' ,='' placeholder='search 1000+ courses')
-            h3 freeCodeCamp (&#x1F525;)
-            .link-item 
-                nav.nav-links
-                    a.nav--items#menu(href='#')
-                        span Menu
-                    a.nav--items#sign-in(href='/signin')
-                        button Sign in
+        include _header
+        //- header.nav
+        //-     input(type='search' ,='' placeholder='search 1000+ courses')
+        //-     h3 freeCodeCamp (&#x1F525;)
+        //-     .link-item 
+        //-         nav.nav-links
+        //-             -if(user)
+        //-                 a.nav--items#menu(href='#')
+        //-                     span Menu
+        //-                 a.nav--items#sign-in(href='#')
+        //-                     button
+        //-                         img(src="/img/user logo.png" width="15")
+        //-             -else 
+        //-                 a.nav-items#menu(href='#')
+        //-                     span Menu 
+        //-                 a.nav--items#sign-in(href='/signin')
+        //-                     button Sign in
         article.container
             .content 
                 h1 Learn to code - for free 

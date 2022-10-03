@@ -15,8 +15,15 @@ passport.use(new GoogleStrategy({
     }))
 
 passport.serializeUser((user,cb)=>{
-    cb(null,user);
+    process.nextTick(()=>{
+        return cb(null,user);
+    })
+
+   
 });
 passport.deserializeUser((obj,cb)=>{
-    cb(null,obj);
+    process.nextTick(()=>{
+        return cb(null,obj);
+    })
+    
 })

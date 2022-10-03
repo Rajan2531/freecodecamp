@@ -16,6 +16,7 @@ app.use(session({
     saveUninitialized:true,
     secret:'SECRET'
 }))
+app.use(passport.authenticate('session'));
 
 
 app.use(passport.initialize());
