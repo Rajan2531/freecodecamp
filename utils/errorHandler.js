@@ -24,5 +24,5 @@ exports.errorHandle= (err,req,res,next)=>{
         developmentModeHandler(err,res);
     }
     else
-    productionModeHandler(err,req,res,next);
+    productionModeHandler(err,res);
 }

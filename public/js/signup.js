@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { showAlert } from './alert'
 
 export const signup=async(name,email,password,passwordConfirm)=>
 {
@@ -15,6 +16,7 @@ export const signup=async(name,email,password,passwordConfirm)=>
     })
     if(res)
     {
+        showAlert("success","User registered successfully")
         setTimeout(()=>{
             location.assign('/dashboard');
         },1000)
@@ -22,6 +24,7 @@ export const signup=async(name,email,password,passwordConfirm)=>
 }
 catch(err)
 {
+    showAlert("error",err.response.data.message)
     console.log(err);
 }
 }
